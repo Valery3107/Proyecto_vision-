@@ -263,7 +263,7 @@
           </span>
           <input type="password" placeholder="CONTRASEÑA">
         </div>
-        <button class="btn-primary-genbu">INICIAR SESIÓN</button>
+        <button type="button" class="btn-primary-genbu" id="btn-login-genbu">INICIAR SESIÓN</button>
         <a href="forgot-password.html" class="link-text">¿Olvidaste tu contraseña?</a>
         <a href="SignUp.html" class="link-text">Crear una cuenta nueva</a>
       </div>
@@ -271,6 +271,12 @@
 
   </div>
 </div>
+
+<script>
+  document.getElementById("btn-login-genbu").addEventListener("click", function () {
+    window.location.href = "viewPet.html";
+  });
+</script>
 
 </body>
 </html>

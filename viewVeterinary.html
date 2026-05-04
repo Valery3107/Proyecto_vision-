@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/genbu-variables.css">
   <link rel="stylesheet" href="css/genbu-common.css">
+  <link rel="stylesheet" href="css/genbu-signup.css">
   <style>
     /* Vista veterinario: reutiliza tokens; filas etiqueta + campo (sin columna de icono) */
     .page--vet {
@@ -98,10 +99,29 @@
       font-weight: 600;
     }
 
+    /* Reutiliza .btn--signup (genbu-signup.css); bloque propio para apilar CTA + enlace secundario */
     .vet-actions {
       margin-top: 24px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .vet-actions .btn--signup {
+      width: min(100%, 280px);
+      box-sizing: border-box;
+    }
+
+    a.logo-circle {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a.logo-circle:focus-visible {
+      outline: 2px solid var(--verde-azulado);
+      outline-offset: 4px;
+      border-radius: 50%;
     }
 
     .vet-btn-submit {
@@ -167,9 +187,9 @@
 
   <main class="page page--vet">
     <header class="header">
-      <div class="logo-circle">
-        <img src="images/logo.png" alt="Logo GENBU">
-      </div>
+      <a href="pgc.html" class="logo-circle" aria-label="Ir al inicio de sesión">
+        <img src="images/logo.png" alt="">
+      </a>
       <div class="headline">
         <h1>Perfil del médico veterinario</h1>
       </div>
@@ -230,6 +250,7 @@
 
         <div class="vet-actions">
           <button type="submit" class="vet-btn-submit">Crear cuenta</button>
+          <a class="btn--signup btn-secondary" href="pgc.html">Volver al inicio de sesión</a>
         </div>
       </form>
     </section>
